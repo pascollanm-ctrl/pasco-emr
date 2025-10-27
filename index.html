@@ -7,17 +7,13 @@
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Customizing Tailwind to define a professional, corporate color palette
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            // Dark, sophisticated base for hero/accent areas
-            'corporate-dark': '#0f172a', // Slate 900
-            // Primary brand color (Professional Blue)
-            'corporate-blue': '#1e40af', // Blue 700
-            // Accent color for CTAs and highlights (Vibrant Blue)
-            'cta-blue': '#3b82f6', // Blue 500
+            'corporate-dark': '#0f172a',
+            'corporate-blue': '#1e40af',
+            'cta-blue': '#3b82f6',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -27,13 +23,14 @@
     }
   </script>
   <style>
-    /* Custom styles for professional transitions and button depth */
     .button-premium {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
     .button-premium:hover {
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                  0 4px 6px -2px rgba(0, 0, 0, 0.05);
       transform: translateY(-2px);
     }
     .feature-card {
@@ -48,16 +45,15 @@
 </head>
 <body class="font-sans bg-gray-50 text-gray-900 min-h-screen">
 
-  <!-- Navigation Bar (Restored to Text Branding) -->
+  <!-- Navigation -->
   <nav class="sticky top-0 z-10 bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div class="text-xl font-extrabold text-corporate-blue tracking-wide">
             Pasco <span class="text-gray-800">EMR</span>
         </div>
-        <!-- In a real app, links would go here -->
         <div class="hidden md:flex space-x-4 text-sm font-medium">
-            <a href="#features" class="text-gray-600 hover:text-corporate-blue transition duration-150">Features</a>
-            <a href="#contact" class="text-gray-600 hover:text-corporate-blue transition duration-150">Contact</a>
+            <a href="#features" class="text-gray-600 hover:text-corporate-blue transition">Features</a>
+            <a href="#contact" class="text-gray-600 hover:text-corporate-blue transition">Contact</a>
         </div>
     </div>
   </nav>
@@ -80,7 +76,7 @@
       </div>
     </header>
 
-    <!-- Features Section -->
+    <!-- Features -->
     <section id="features" class="py-24 px-4">
       <h2 class="text-4xl font-extrabold text-center mb-4 text-corporate-dark">System Capabilities</h2>
       <p class="text-xl text-center text-gray-500 max-w-2xl mx-auto mb-16">
@@ -88,46 +84,30 @@
       </p>
       
       <div class="feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        
-        <!-- Feature Card 1 -->
         <div class="feature-card bg-white p-7 rounded-xl shadow-lg border-t-4 border-corporate-blue">
           <span class="text-4xl text-cta-blue mb-3 block">🧠</span>
           <h3 class="text-xl font-bold mb-2 text-corporate-dark">AI-Powered EMR</h3>
           <p class="text-gray-600 text-sm">Securely store, retrieve, and manage patient data with predictive analytics and intelligent indexing.</p>
         </div>
 
-        <!-- Feature Card 2 -->
         <div class="feature-card bg-white p-7 rounded-xl shadow-lg border-t-4 border-corporate-blue">
           <span class="text-4xl text-cta-blue mb-3 block">💸</span>
           <h3 class="text-xl font-bold mb-2 text-corporate-dark">Unified Financial Flow</h3>
-          <p class="text-gray-600 text-sm">Automated billing that seamlessly integrates drugs, lab tests, and complex payment structures.</p>
+          <p class="text-gray-600 text-sm">Automated billing that integrates drugs, lab tests, and payment structures seamlessly.</p>
         </div>
 
-        <!-- Feature Card 3 -->
         <div class="feature-card bg-white p-7 rounded-xl shadow-lg border-t-4 border-corporate-blue">
           <span class="text-4xl text-cta-blue mb-3 block">⚙️</span>
           <h3 class="text-xl font-bold mb-2 text-corporate-dark">Google Workspace Sync</h3>
           <p class="text-gray-600 text-sm">Full compatibility with Google Sheets and Apps Script for bespoke reporting and data manipulation.</p>
         </div>
 
-        <!-- Feature Card 4 -->
         <div class="feature-card bg-white p-7 rounded-xl shadow-lg border-t-4 border-corporate-blue">
           <span class="text-4xl text-cta-blue mb-3 block">🛡️</span>
           <h3 class="text-xl font-bold mb-2 text-corporate-dark">Security & Compliance</h3>
-          <p class="text-gray-600 text-sm">Leveraging Google Cloud for maximum data protection, speed, and regulatory compliance.</p>
+          <p class="text-gray-600 text-sm">Leveraging Google Cloud for data protection, speed, and regulatory compliance.</p>
         </div>
       </div>
-    </section>
-
-    <!-- CTA Section (System Preview) -->
-    <section class="demo py-16 bg-corporate-blue text-white text-center rounded-2xl mx-4 my-20 shadow-xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience the Pasco Advantage</h2>
-      <p class="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-        Don't just read about efficiency—see it in action. View our live environment to understand the full user experience.
-      </p>
-      <button onclick="window.open('YOUR_WEB_APP_URL')" class="button-premium bg-white text-corporate-blue font-bold py-3 px-10 rounded-xl shadow-lg hover:bg-gray-200 active:scale-98 text-lg">
-        View Live EMR System
-      </button>
     </section>
 
     <!-- Contact Section -->
@@ -145,8 +125,8 @@
 
       <div class="text-center mt-10 text-gray-600 text-lg">
         <p class="mb-2 font-semibold text-corporate-dark">Direct Communication</p>
-        <p class="mb-2">📞 WhatsApp: <a href="https://wa.me/254711214268" class="text-cta-blue hover:text-blue-700 font-medium transition duration-150">0711214268</a></p>
-        <p>📧 Email: <a href="mailto:pascollanm@gmail.com" class="text-cta-blue hover:text-blue-700 font-medium transition duration-150">pascollanm@gmail.com</a></p>
+        <p class="mb-2">📞 WhatsApp: <a href="https://wa.me/254711214268" class="text-cta-blue hover:text-blue-700 font-medium transition">0711214268</a></p>
+        <p>📧 Email: <a href="mailto:pascollanm@gmail.com" class="text-cta-blue hover:text-blue-700 font-medium transition">pascollanm@gmail.com</a></p>
       </div>
     </section>
 
@@ -154,43 +134,50 @@
     <footer class="mt-20 py-8 text-center text-sm text-gray-500 border-t border-gray-200 bg-white">
       <p>© 2025 Pasco Creation | Smart Healthcare Automation. All Rights Reserved.</p>
     </footer>
-
   </div>
 
-  <!-- JavaScript for Form Handling -->
+  <!-- Updated Contact Form Integration -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const contactForm = document.getElementById('contactForm');
-      
+
       if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-          e.preventDefault(); // Stop the default form submission
+          e.preventDefault();
 
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
 
-          console.log('Enterprise Contact Form Submission:');
-          console.log(`Name: ${name}`);
-          console.log(`Email: ${email}`);
-          console.log(`Message: ${message}`);
-          
-          // Provide professional, visual feedback to the user
           const submitButton = contactForm.querySelector('button[type="submit"]');
           const originalText = submitButton.textContent;
           const originalClasses = submitButton.className;
 
-          submitButton.textContent = 'Inquiry Received!';
-          submitButton.className = 'button-premium w-full bg-cta-blue text-white font-bold py-4 rounded-lg shadow-md active:scale-99 transition duration-150 text-lg cursor-not-allowed';
+          submitButton.textContent = 'Submitting...';
           submitButton.disabled = true;
 
-          // Reset the button and form after a short delay
-          setTimeout(() => {
-            contactForm.reset();
-            submitButton.textContent = originalText;
-            submitButton.className = originalClasses;
+          fetch("https://script.google.com/macros/s/AKfycbzIm7YUz1GJsUWgp1qiTNp3VFYHPMHB0AKWdLp384Mg_bJJf2-GoJeVeCgeqEex8Pn-rA/exec", {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message }),
+          })
+          .then(() => {
+            submitButton.textContent = 'Inquiry Sent ✅';
+            submitButton.className = 'button-premium w-full bg-cta-blue text-white font-bold py-4 rounded-lg shadow-md text-lg cursor-not-allowed';
+            
+            setTimeout(() => {
+              contactForm.reset();
+              submitButton.textContent = originalText;
+              submitButton.className = originalClasses;
+              submitButton.disabled = false;
+            }, 3000);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            submitButton.textContent = 'Error! Try again ❌';
             submitButton.disabled = false;
-          }, 3000);
+          });
         });
       }
     });
